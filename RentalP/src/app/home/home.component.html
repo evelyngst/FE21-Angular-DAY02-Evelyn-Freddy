@@ -1,0 +1,17 @@
+<!-- <div *ngFor="let car of RentCar; index as i"> -->
+<!-- <p>{{i}}</p>
+    <p>{{car.image}}</p>
+    <p>{{car.brand}}</p>
+    <p>{{car.color}}</p>
+  </div> -->
+
+<div *ngFor="let car of RentCar" class="card-deck">
+    <div class="card">
+        <img class="card-img-top" src="{{car.image}}" alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title">{{car.brand}}</h5>
+            <p class="card-text"><span><Strong>Car color:</Strong> {{car.color}}</span><br><span>number of doors: {{car.doors}}</span><br><span>price: {{car.price}}</span></p>
+            <p class="card-text"><small class="text-muted">Rent it now</small></p>
+        </div>
+    </div>
+</div>

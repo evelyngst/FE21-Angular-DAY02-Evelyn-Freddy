@@ -6,6 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
+  clickCounter: number = 0;
+
+// tslint:disable-next-line: typedef
+countClick(){
+  this.clickCounter += 10;
+}
 
   constructor() { }
 

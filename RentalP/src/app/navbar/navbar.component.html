@@ -17,10 +17,13 @@
                     <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Contact us</a>
                 </li>
             </ul>
-            <form class="d-flex">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
+            <button type="button" class="btn btn-success" (click)="countClick()">Donate <span>{{clickCounter}}$</span></button>
+            <ng-template [ngIf]="clickCounter >= 200" [ngIfElse]="none">
+                <p>You are a: <b>VIP</b></p>
+            </ng-template>
+            <ng-template #none>
+                <p>We need more <b>Money</b></p>
+            </ng-template>
         </div>
     </div>
 </nav>
